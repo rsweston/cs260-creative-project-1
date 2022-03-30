@@ -1,0 +1,514 @@
+/* Color Palette:
+ * turquoise - #3FC1CA #5FCBD3 // represents business
+ * dark red  - #911A12  // complimentary
+ * grey      - #96A2B0  // grounding, for accents
+ * dark      - #1B150E  // paragraph text
+ * light     - #E6EAEF  // backgrounds & supporting elements
+
+ /* Fonts:
+  * sans-serif  - Montserrat  // headers, non-body text
+  * serif       - Lora        // body text
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lora", serif;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #E6EAEF;
+}
+
+/* DEBUGGING
+* {
+  padding: 5px;
+}
+
+div {
+  border: 1px solid black;
+}
+ */
+/* END DEBUGGING
+*/
+/* Login & Sign Up Page */
+.login-body {
+  width: 85%;
+}
+
+.login-content-container {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.login-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-header {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+}
+
+.login-header-title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.login-header-title h1 {
+  font-size: 2.3em;
+  font-weight: bold;
+  color: #1B150E;
+}
+
+.login-header-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login-header-buttons div a {
+  color: #96A2B0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.active-button {
+  color: #3FC1CA !important;
+}
+
+.login-header-buttons div a:hover {
+  color: #911A12;
+  transition-duration: 0.4s;
+}
+
+.login-header-buttons div:last-child {
+  margin-left: 14px;
+}
+
+form {
+  width: 100%;
+}
+
+.input-bar {
+  margin-top: 15px;
+}
+
+input {
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 10px;
+  border: 1px solid #96A2B0;
+  border-radius: 4px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #1B150E;
+  transition-duration: 0.4s;
+}
+
+.login-button {
+  margin: 16px 0;
+}
+
+.login-form button, .login-form button a {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: inherit;
+  font-weight: bold;
+  color: #E6EAEF;
+  background-color: #3FC1CA;
+  border: none;
+  padding: 15px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.24);
+  transition-duration: 0.2s;
+  /*
+  background-color: #911A12;
+  * 1B150E
+  * 96A2B0
+  transition-duration: 0.4s;
+  */
+}
+
+.forgot-password-text {
+  font-style: inherit;
+  font-size: 12px;
+  /*
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  */
+}
+
+.forgot-password-text a {
+  color: #3FC1CA;
+}
+
+.forgot-password-text a:hover {
+  color: #911A12;
+  transition-duration: 0.4s;
+}
+
+/* Footer */
+.footer-container {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
+.footer-content a {
+  font-size: 12px;
+  color: #1B150E;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+/* Menu */
+.navbar-nav {
+  margin-left: auto;
+}
+
+.bg-dark {
+  background-color: #1B150E !important;
+}
+
+.navbar-brand {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #3FC1CA !important;
+}
+
+.nav-item {
+  font-family: "Montserrat", sans-serif;
+}
+
+.active {
+  color: #E6EAEF !important;
+}
+
+/* Dashboard Page */
+.dashboard-content-container {
+  display: flex;
+  justify-content: center;
+  /*
+  justify-content: center;
+  flex-direction: column;
+  */
+}
+
+.dashboard-content {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /*
+  flex-direction: column;
+  */
+}
+
+.dashboard-content-section {}
+
+.dashboard-content-section h1 {
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.dashboard-content-block {
+  padding: 20px 20px 1px 20px;
+  margin: 0 0 20px 0;
+  border-radius: 8px;
+  background-color: #5FCBD3;
+}
+
+#today-block {
+  color: #E6EAEF;
+  background-color: #911A12;
+}
+
+#today-block h2 {
+  font-weight: bold;
+}
+
+.dashboard-content-block ul {
+  list-style: none;
+}
+
+.dashboard-task-container {
+  /* customize the label (checkbox container) */
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-family: "Lora", serif;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dashboard-task-container input {
+  /* hide default checkbox */
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  /* create custom checkbox */
+  border: 1px solid #1B150E;
+  position: absolute;
+  top: 2.5px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 2px;
+}
+
+.dashboard-task-container:hover input~.checkmark {
+  /* on mouse-over, change background color */
+  background-color: #ccc;
+}
+
+.dashboard-task-container input:checked~.checkmark {
+  /* when checked, change background color */
+  background-color: #1B150E;
+}
+
+.checkmark:after {
+  /* create the checkmark, when checked */
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.dashboard-task-container input:checked~.checkmark:after {
+  /* show checkmark when checked */
+  display: block;
+}
+
+.dashboard-task-container .checkmark:after {
+  /* style the checkmark */
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*
+.task-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.task p:first-child {
+  margin-bottom: 0px;
+}
+
+*/
+/* Quests Page */
+.quests-content-container {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+}
+
+.quests-content-container h2 {
+  margin: 20px 0 0 0;
+  padding: 0;
+  font-size: 2.5em;
+}
+
+.quest-item {
+  width: 100%;
+  background-color: #5FCBD3;
+  margin: 20px 0 0 0;
+  padding: 15px;
+  border-radius: 8px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.quest-item:hover {
+  color: inherit;
+  text-decoration: none;
+  background-color: #96A2B0;
+  transition-duration: 0.2s;
+}
+
+.quest-item h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: inherit;
+  text-decoration: none;
+}
+
+.quest-item p {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Quest Pages */
+#quest-name {
+  font-size: 2em;
+}
+
+#quest-date {
+  margin: 0 0 5px 2px;
+  padding: 0;
+}
+
+.subgoal:hover {
+  background-color: #5FCBD3;
+}
+
+.quest-item ul {
+  list-style: none;
+  margin: 20px 0 -3px 0;
+  padding: 0;
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+
+  /* Login Page */
+  .login-body {
+    width: 450px;
+  }
+
+  .login-header {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .login-header-title {
+    width: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .login-header-title h1 {
+    font-size: 3em;
+  }
+
+  .login-header-buttons {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Dashboard Page */
+  .dashboard-content-wrapper {
+    display: flex;
+    /*
+    justify-content: center;
+    */
+  }
+
+  .dashboard-content-container {
+    /*
+    width: 90%;
+    flex-direction: row;
+    */
+  }
+
+  .dashboard-content {
+    justify-content: space-around;
+    flex-direction: row;
+    /*
+    width: 50%;
+    */
+  }
+
+  .dashboard-content-section {
+    width: 35%;
+  }
+
+  .dashboard-content-section h1 {
+    font-size: 3em;
+  }
+
+  /* Quests Page */
+  .quests-content-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+  }
+
+  .quests-content-container h2 {
+    margin: 20px 0 0 0;
+    padding: 0;
+    font-size: 2.75em;
+  }
+
+  .quest-item {
+    width: 100%;
+    background-color: #5FCBD3;
+    margin: 20px 0 0 0;
+    padding: 20px;
+    border-radius: 8px;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Quest Pages */
+  #quest-name {
+    font-size: 2.5em;
+  }
+}
